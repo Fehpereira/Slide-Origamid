@@ -21,14 +21,27 @@ img {
 .slide{
   display: flex;
 
+  &:hover{
+    will-change: transform;
+  }
+
   & li {
     flex-shrink: 0;
     width: 80vw;
     max-width: 800px;
     margin: 0 20px;
+    height: fit-content;
+
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,1);
+    opacity: .8;
+    transform: scale(.8);
+    transition: .4s;
   }
 }
 
-.slide {
-  transform: translate3d(8px, 0, 0);
+.slide li.active {
+  opacity: 1;
+  transform: scale(1)
 }
